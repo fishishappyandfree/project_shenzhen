@@ -1,0 +1,12 @@
+﻿http://archive.kernel.org/centos-vault/7.4.1708/isos/x86_64/  centos下载地址centos-vault/7.4.1708/isos/x86_64/CentOS-7-x86_64-DVD-1708.iso
+
+
+
+virtulbox 主机从虚拟机中获取数据,用sftp duan@192.168.1.35, 再用get 文件名,获得文件
+
+
+
+https://www.ubuntuupdates.org/ppa/virtualbox.org_contrib virtulbox下载地址 virtualbox-6.0_6.0.8-130520~Ubuntu~bionic_amd64.deb
+
+
+https://chubuntu.com/questions/24403/failed-to-start-lsb-virtualbox-linux-kernel-module.html

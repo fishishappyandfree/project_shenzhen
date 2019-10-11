@@ -1,0 +1,5 @@
+将EsgynDB.py和run.sh文件放到10.143.62.231中
+	命令：sh run.sh 即可运行EsgynDB.py
+至于为什么不直接运行EsgynDB.py，
+可以查看run.sh文件中设置了export AppUnicodeType=utf16
+也可以在环境变量中设置这条语句，就可以直接运行EsgynDB.py文件

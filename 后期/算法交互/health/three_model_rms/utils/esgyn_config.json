@@ -1,0 +1,19 @@
+{
+  "db": {
+    "dsn": "traf",
+    "uid": "trafodion",
+    "pwd": "traf123",
+    "schedule": {
+      "fetch_size": 10,
+      "count_number": 1024,
+      "count_iter_times": 60
+    }
+  },
+  "kafka": {
+    "bootstrap_servers": ["10.143.62.232:9092","10.143.62.231:9092"],
+    "max_poll_records": 10,
+    "auto_offset_reset": "latest",
+    "enable_auto_commit": true,
+    "avro_path": ""
+  }
+}

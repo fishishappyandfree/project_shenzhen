@@ -1,0 +1,19 @@
+1.连入nadder4
+ssh root@10.143.62.234
+
+2 跳转到three_model指定目录
+cd /wzs/model/
+
+3 将调试好的 three_model 文件夹放入当前目录下（我一般通过spft协议上传three_model.zip文件到当前目录下，再解压）
+
+
+4 进入解压后的three_model/目录， 
+
+4.1 运行测试脚本， python dataflow_online_run_acce.py(为了加快速度，开启三个终端，根据topic类别分别运行文件 dataflow_online_run_acce、dataflow_online_run_microphone、dataflow_online_run_sound1)
+
+4.2 运行训练脚本， python schedule_offline_run.py
+
+注：若遇到系统的问题，请询问易鲸捷公司的工作人员，若有算法相关问题，请找段博
+
+
+说明，如要更换虚拟环境，进入 根目录/ 下，进入anaconda安装目录下的envs/，上传配置好的 虚拟环境（可以先在 b1 这边用anaconda配置好，将相应的虚拟环境包压缩后，拷贝到 b3， 因为b3那边网速太慢而且不方便到主机调控，一直通过远程访问的形式访问服务器） 

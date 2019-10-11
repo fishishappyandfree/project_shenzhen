@@ -1,0 +1,29 @@
+统一口径：
+    1：在线、online、在线学习、测试模型 、数据源是kafka、 模型方法是run_test
+    2：离线、offline、离线学习、训练模型 、数据源是数据库、 模型方法是run_train
+
+需要注意的几个文件
+utils/sensor_checkpoint.json    每个sensor_id对应的checkpoints相对目录
+
+utils/model_util.py 根据sensor_id确定checkpoints目录和模型
+    第25行，因为上面的json文件中放的是相对目录，尽量使用绝对路径，所以加一个home_path
+    第26行，self.sensor_model 每个sensor_id 对应的模型
+--调用的文件路径尽量都要使用绝对路径，不管是模型文件还是其他
+--尽量还放到之前的位置，因为web界面会调用dataflow_remote_run_gpu.py文件
+--如果想要放到其他位置，所以的路径都要改
+
+dataflow_online_run.py  在线学习
+    参看第19行注释
+    参看第28行注释
+    说明：在线学习中从kafka消费数据，如果只启动一个当前文件，只有一个进程一个线程，所以性能可能会差，尤其是声发射的数据量很大
+        可以复制多个这样的文件，运行多个，只需要注意多个文件中 ** kafka的topic一定不能一样 **，尽量做到负载均衡
+
+schedule_offline_run.py 离线学习
+    参看112行注释
+
+四个简单的启停shell脚本，想用就用，不想用根据自己的习惯都可以
+
+补充说明：run_train方法需要一个版本的返回值，也就是当前的模型属于哪个版本的
+        其实就是一个字符串，比如说 "v1.1"、 "v1.2" 很简单的这种，不要太复杂就行
+
+

@@ -1,0 +1,166 @@
+技术：
+	如果需要把Python项目所需要的库生成一个文件，方便下次使用时用命令直接安装，可以使用pip freeze
+	pip freeze >> requirements.txt
+	生成一个迁移文件
+	然后通过命令：
+	pip install -r requirement_path
+	即可重新安装环境
+
+Windows用Xshell链接Linux服务器后，需要网络适配器页面修改以太网internet协议版本4属性：
+IP地址：10.143.62.236
+子网掩码：255.0.0.0
+
+
+然后去https://www.cnblogs.com/dasianer/p/9525582.html，查看win10修改host文件，
+在hosts文件中添加 10.143.62.232       nadder2  IP地址是kafka集群所在主机地址，nadder2是主机名，注意两个参数间距     否则会报错：WARNING:kafka.conn:DNS lookup failed for nadder2:9092, exception was [Errno 11001] getaddrinfo failed. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+ERROR:kafka.conn:DNS lookup failed for nadder2:9092 (AddressFamily.AF_UNSPEC)
+
+安装avro-python3包，不要安装avro包，否则会报错，
+安装avro-Python3包后，将第59行的avro.schema.parse改成avro.schema.Parse
+
+安装kafka-python包
+
+报错：the JSON object must be str, not 'bytes'
+在KafkaService.py文件中，59行read()末尾添加.decode()
+
+
+
+(tensorflow) C:\Users\wzs>conda list
+# packages in environment at C:\software\anaconda3.5.2x64\envs\tensorflow:
+#
+absl-py                   0.7.0                     <pip>
+alabaster                 0.7.10                   py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+astor                     0.7.1                     <pip>
+astroid                   1.5.3                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+avro-python3              1.8.0                     <pip>
+babel                     2.5.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+backports                 1.0                      py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+backports.weakref         1.0rc1                   py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+blas                      1.0                         mkl    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+bleach                    1.5.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+certifi                   2016.2.28                py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+chardet                   3.0.4                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+colorama                  0.3.9                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+cycler                    0.10.0                   py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+decorator                 4.1.2                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+docutils                  0.14                     py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+entrypoints               0.2.3                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+fastavro                  0.21.20                   <pip>
+gast                      0.2.2                     <pip>
+grpcio                    1.19.0                    <pip>
+h5py                      2.9.0                     <pip>
+html5lib                  0.9999999                py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+icu                       57.1                     vc14_0  [vc14]  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+imagesize                 0.7.1                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+ipykernel                 4.6.1                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+ipython                   6.1.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+ipython_genutils          0.2.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+isort                     4.2.15                   py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+jedi                      0.10.2                   py35_2    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+jinja2                    2.9.6                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+jpeg                      9b                       vc14_0  [vc14]  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+jsonschema                2.6.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+jupyter_client            5.1.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+jupyter_core              4.3.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+kafka-python              1.4.6                     <pip>
+Keras-Applications        1.0.7                     <pip>
+Keras-Preprocessing       1.0.9                     <pip>
+kiwisolver                1.0.1                     <pip>
+lazy-object-proxy         1.3.1                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+libpng                    1.6.30                   vc14_1  [vc14]  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+libprotobuf               3.2.0                    vc14_0  [vc14]  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+markdown                  2.6.9                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+markupsafe                1.0                      py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+matplotlib                3.0.3                     <pip>
+mistune                   0.7.4                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+mkl                       2017.0.3                      0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+mock                      2.0.0                     <pip>
+nbconvert                 5.2.1                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+nbformat                  4.4.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+npTDMS                    0.14.0                    <pip>
+numpy                     1.16.2                    <pip>
+numpydoc                  0.7.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+openssl                   1.0.2l                   vc14_0  [vc14]  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+pandas                    0.24.2                    <pip>
+pandocfilters             1.4.2                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+path.py                   10.3.1                   py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+pbr                       5.1.3                     <pip>
+pickleshare               0.7.4                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+Pillow                    5.4.1                     <pip>
+pip                       9.0.1                    py35_1    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+prompt_toolkit            1.0.15                   py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+protobuf                  3.7.0                     <pip>
+protobuf                  3.2.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+psutil                    5.2.2                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+pycodestyle               2.3.1                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+pyflakes                  1.6.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+pygments                  2.2.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+pylint                    1.7.2                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+pyparsing                 2.2.0                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+pyqt                      5.6.0                    py35_2    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+PyQt5                     5.12.1                    <pip>
+PyQt5_sip                 4.19.15                   <pip>
+python                    3.5.4                         0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+python-dateutil           2.6.1                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+pytz                      2017.2                   py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+PyWavelets                1.0.3                     <pip>
+pywt                      1.0.6                     <pip>
+pyzmq                     16.0.2                   py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+qt                        5.6.2                    vc14_6  [vc14]  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+qtawesome                 0.4.4                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+qtconsole                 4.3.1                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+qtpy                      1.3.1                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+requests                  2.14.2                   py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+rope                      0.9.4                    py35_1    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+scikit-learn              0.20.3                    <pip>
+scipy                     1.2.1                     <pip>
+setuptools                36.4.0                   py35_1    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+simplegeneric             0.8.1                    py35_1    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+singledispatch            3.4.0.3                  py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+sip                       4.18                     py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+six                       1.10.0                   py35_1    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+snowballstemmer           1.2.1                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+sphinx                    1.6.3                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+sphinxcontrib             1.0                      py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+sphinxcontrib-websupport  1.0.1                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+spyder                    3.2.3                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+SQLAlchemy                1.3.2                     <pip>
+tensorboard               1.13.1                    <pip>
+tensorflow                1.13.1                    <pip>
+tensorflow-estimator      1.13.0                    <pip>
+termcolor                 1.1.0                     <pip>
+testpath                  0.3.1                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+tk                        8.5.18                   vc14_0  [vc14]  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+tornado                   4.5.2                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+traitlets                 4.3.2                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+vc                        14                            0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+vs2015_runtime            14.0.25420                    0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+wcwidth                   0.1.7                    py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+werkzeug                  0.12.2                   py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+wheel                     0.29.0                   py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+win_unicode_console       0.5                      py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+wincertstore              0.2                      py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+wrapt                     1.10.11                  py35_0    https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+zlib                      1.2.11                   vc14_0  [vc14]  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+
+环境 tensorflow1.
+
+
+http://archive.kernel.org/centos-vault/7.4.1708/isos/x86_64/  centos下载地址centos-vault/7.4.1708/isos/x86_64/CentOS-7-x86_64-DVD-1708.iso
+
+
+
+virtulbox 主机从虚拟机中获取数据,用sftp duan@192.168.1.35, 再用get 文件名,获得文件
+
+
+
+https://www.ubuntuupdates.org/ppa/virtualbox.org_contrib virtulbox下载地址 virtualbox-6.0_6.0.8-130520~Ubuntu~bionic_amd64.deb
+
+
+https://chubuntu.com/questions/24403/failed-to-start-lsb-virtualbox-linux-kernel-module.html
+
+
+
+
+
+

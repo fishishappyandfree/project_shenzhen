@@ -1,0 +1,27 @@
+MT1_x_feed      1号机床的x进给轴振动信号               cDAQ9189-1D71297Mod1/ai3
+
+MT2_ae_raw      2号机床的声发射原始信号             cDAQ9189-1D91958Mod5/ai1
+
+MT2_ae_rms      2号机床的声发射信号有效值处理        cDAQ9189-1D91958Mod5/ai1
+
+MT2_micphone    2号机床的麦克风信号                   cDAQ9189-1D71297Mod5/ai1
+
+MT2_spindle_z   2号机床的主轴z向振动信号              cDAQ9189-1D71297Mod3/ai2
+
+MT2_x_feed      2号机床的x进给轴振动信号           cDAQ9189-1D71297Mod3/ai3
+
+MT2_y_feed      2号机床的y进给轴振动信号              cDAQ9189-1D71297Mod2/ai1
+
+MT3_micphone    3号机床的麦克风信号              cDAQ9189-1D71297Mod5/ai2
+
+MT3_x_feed      3号机床的x进给轴振动信号             cDAQ9189-1D71297Mod4/ai3
+
+MT3_y_feed      3号机床的y进给轴振动信号         cDAQ9189-1D71297Mod2/ai2
+
+TG_x_feed       磨床的x进给轴振动信号          cDAQ2Mod2/ai3
+
+TG_y_feed       磨床的y进给轴振动信号           cDAQ2Mod3/ai0
+
+
+注： MT2_ae_raw测试时输入的数据，159744个点， 其他的都是2048
+     MT2_ae_raw训练时输入的数据，（500.159744），（500,3），其它的都是（500,2048），（500,3）

@@ -1,0 +1,19 @@
+{
+  "one": {
+    "cDAQ9189-1D71297Mod1/ai3": "/checkpoints/MT1_x_feed",
+    "cDAQ9189-1D91958Mod5/ai1": "/checkpoints/MT2_ae_raw",
+    "cDAQ9189-1D71297Mod5/ai1": "/checkpoints/MT2_micphone",
+    "cDAQ9189-1D71297Mod3/ai2": "/checkpoints/MT2_spindle_z",
+    "cDAQ9189-1D71297Mod3/ai3": "/checkpoints/MT2_x_feed",
+    "cDAQ9189-1D71297Mod2/ai1": "/checkpoints/MT2_y_feed",
+    "cDAQ9189-1D71297Mod5/ai2": "/checkpoints/MT3_micphone",
+    "cDAQ9189-1D71297Mod4/ai3": "/checkpoints/MT3_x_feed",
+    "cDAQ9189-1D71297Mod2/ai2": "/checkpoints/MT3_y_feed",
+    "cDAQ2Mod2/ai3": "/checkpoints/TG_x_feed",
+    "cDAQ2Mod3/ai0": "/checkpoints/TG_y_feed"
+  },
+  "two": {
+
+  }
+
+}

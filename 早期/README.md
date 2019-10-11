@@ -1,0 +1,26 @@
+# project_js
+windows-ananconda-kafka-tensorflow1_13_1
+
+data_analysis_TDMS文件夹中
+get_data_no_optimizer_raw.py文件是读取TDMS文件的初始化代码，师兄给的，比较乱
+get_data_optimizer.py文件是优化后的代码，原文件是针对10000,20000
+get_data_adapted_3000_5000.py是优化后针对feed_x进给速度为3000,5000写的
+read_TDMS_to_mat.py是用来读取TDMS文件后直接分析时域数据的
+
+checkpoints文件夹中是已经训练好的模型参数数据
+
+
+CNN_model.py, Config.py, run_noChanged_raw.py是原始模型运行需要的文件，运行前，需要用data_analysis_TDMS文件夹中的文件读取TDMS文件，保存成.mat形式
+run_model_cpu.py和run_model_gpu.py是改进后的代码
+
+KafkaService.py，sensor.avsc， dataflow_run_test是kafka原始测试需要的文件
+
+dataflow_run_cpu.py和dataflow_run_gpu.py是将kafka与模型连通运行的程序，将kafka消费出的数据直接喂给模型去跑
+
+项目技术文档.txt中写的是windows-ananconda-kafka-tensorflow1_13_1中的连接局域网，修改Windows中host文件，及需要的包的版本
+
+read_TDMS_to_mat.m是MATLAB中读取TDMS数据转换为.mat形式保存，因为MATLAB中方便查看通道，双击运行后的变量data往后找就可以
+
+esgyn_db文件夹里是连接易鲸捷数据库的代码
+
+PPT文件夹里是做PPT汇报的素材

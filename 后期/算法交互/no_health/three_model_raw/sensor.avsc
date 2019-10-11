@@ -1,0 +1,78 @@
+{
+  "namespace": "com.esgyn.foxconnAI.a",
+  "type": "record",
+  "name": "Sensor",
+  "fields": [
+    {
+      "name": "device_id",
+      "type": "string"
+    },
+    {
+      "name": "sample_ts",
+      "type": "long"
+    },
+    {
+      "name": "sensor_id",
+      "type": "string"
+    },
+    {
+      "name": "data",
+      "type": {
+        "type": "array",
+        "items": "double"
+      }
+    },
+    {
+      "name": "input_speed",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "spindle_speed",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "feed_rate",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "spindle_load_ratio",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "spindle_current",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "motor_temperature",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "cutting_depth",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "cutting_time",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "booting_time",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "operating_time",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "x_axis_position",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "y_axis_position",
+      "type": [ "null", "string" ]
+    },
+    {
+      "name": "z_axis_position",
+      "type": [ "null", "string" ]
+    }
+  ]
+}
